@@ -28,4 +28,12 @@ function palindromeCheck (string) {
 }
 
 const word = prompt('inserisci una parola');
+console.log(word);
 const palindrome = palindromeCheck(word);
+
+if (palindrome) {
+    console.log('La parola inserita è palindroma');
+}
+else {
+    console.log('La parola inserita non è palindroma');
+}
