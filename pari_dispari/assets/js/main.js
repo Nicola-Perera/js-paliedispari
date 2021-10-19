@@ -41,11 +41,17 @@ function gameEvenOdd (string, number) {
 
 // l'utente sceglie se vincere in caso di pari o dispari
 let userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
-
 while (userPick != 'p' && userPick != 'd') {
     userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
-
 }
 
+// range fra cui poter scegliere il numero con cui si vuole giocare
+const minAcceptable = 1;
+const maxAcceptable = 5;
+
+let userNumber = parseInt(prompt(`inserisci un numero da ${minAcceptable} a ${maxAcceptable}`));
+while (userNumber < minAcceptable || userNumber > maxAcceptable) {
+    userNumber = parseInt(prompt(`inserisci un numero da ${minAcceptable} a ${maxAcceptable}`));
+}
 
 
