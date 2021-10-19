@@ -17,3 +17,34 @@
         se la variabile creata contiene la stringa uguale a quella inserita dall'utente come primo parametro della funzione, l'utente ha vinto il gioco;
         se la stringhe sono diverse, il computer vince il gioco;
 */
+
+function gameEvenOdd (string, number) {
+
+    const computerNumber = Math.floor(Math.random() * 5) + 1;
+
+    const sum = number + computerNumber;
+
+    if (sum % 2 == 0) {
+        const gameResult = 'p';
+    }
+    else {
+        const gameResult = 'd';
+    }
+    
+    if (string === gameResult) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+// l'utente sceglie se vincere in caso di pari o dispari
+let userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
+
+if (userPick != 'p' || userPick != 'd') {
+    userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
+}
+
+
+
