@@ -42,8 +42,9 @@ function gameEvenOdd (string, number) {
 // l'utente sceglie se vincere in caso di pari o dispari
 let userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
 
-if (userPick != 'p' || userPick != 'd') {
+while (userPick != 'p' && userPick != 'd') {
     userPick = prompt('se vuoi pari digita "p", se vuoi dispari digita "d"');
+
 }
 
 
