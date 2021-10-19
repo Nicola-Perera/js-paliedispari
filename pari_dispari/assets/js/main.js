@@ -24,11 +24,13 @@ function gameEvenOdd (string, number) {
 
     const sum = number + computerNumber;
 
+    let gameResult;
+
     if (sum % 2 == 0) {
-        const gameResult = 'p';
+        gameResult = 'p';
     }
     else {
-        const gameResult = 'd';
+        gameResult = 'd';
     }
     
     if (string === gameResult) {
@@ -53,5 +55,17 @@ let userNumber = parseInt(prompt(`inserisci un numero da ${minAcceptable} a ${ma
 while (userNumber < minAcceptable || userNumber > maxAcceptable) {
     userNumber = parseInt(prompt(`inserisci un numero da ${minAcceptable} a ${maxAcceptable}`));
 }
+
+// si usano i 2 prompt dati dall'utente come parametri per la funzione per giocare
+const result = gameEvenOdd (userPick, userNumber);
+
+// comunichiamo il vincitore
+if (result) {
+    console.log(`hai vinto`);
+}
+else {
+    console.log(`hai perso`);
+}
+
 
 
