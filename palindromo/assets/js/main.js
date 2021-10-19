@@ -6,9 +6,26 @@ PALINDROMA:
 
 /*
 FUNCTION:
-    scompongo la parola nei vari caratteri che la compongono;
-    inserisco i caratteri in un array per riscrivere la parola al contrario;
-    paragono le 2 parole;
-    in caso di valore true, la parola è palindroma e restituisco il valore true;
-    in caso contrario restituisco valore false;
+    divido la parola a metà;
+    in caso il risultato non sia intero, faccio approssimazione per difetto;
+    paragono ogni carattere della prima metà con l'ultimo della seconda metà;
+    continuo i confronti andando verso destro nella prima metà e verso sinistra nella seconda metà;
+    appena un uguaglianza risulta falsail ciclo restituisce valore false;
+    in caso tutte le uguaglianze siano verificate, la parola è palindroma;
 */
+
+function palindromeCheck (string) {
+    let len = string.length;
+    let half = Math.floor(len/2);
+
+    for ( let i = 0; i < half; i++ ) {
+        if (string[i] !== string[len - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+const word = prompt('inserisci una parola');
+const palindrome = palindromeCheck(word);
